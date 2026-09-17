@@ -32,13 +32,7 @@ class Bank
     _save_user(user)
     {
         const data = this.users.find(
-            (item) => 
-            {
-                if (item.username === user.username)
-                {
-                    return item;
-                }
-            }
+            (item) => item.username === user.username
         )
 
         if (data === undefined)
@@ -53,6 +47,41 @@ class Bank
         data.transactionHistory = user.transactionHistory;
 
         this._save_data();
+    }
+
+    _find_user(account)
+    {
+        return this.users.find(
+            (item) => item.username == account
+        );
+    }
+
+    _transfer_money(from_account , to_account , money)
+    {
+        const sender = this.users.find(
+            (user) => user.username == from_account.username
+        );
+
+        const receiver = this.users.find(
+            (user) => user.username == to_account
+        );
+
+        if (!receiver)
+        {
+            return "Cant find receiver";
+        }
+
+        if (money > sender.balance)
+        {
+            return "You cheap fuck";
+        }
+
+        sender.balance -= money;
+        receiver.balance += money;
+
+        this._save_data();
+
+        return "Transfer successfully";
     }
 
     async _login()

@@ -23,7 +23,7 @@ while (user_choice != 0)
         }
     }
 
-    const user = new us.User(is_user);
+    const user = new us.User(is_user , bank);
 
     user_choice = await ui._show_choices();
 

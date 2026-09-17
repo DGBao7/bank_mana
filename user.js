@@ -3,7 +3,7 @@ import ui from "./ui.js"
 
 class User
 {
-    constructor(info)
+    constructor(info , bank)
     {
         this.username = info.username;
         this.password = info.password;
@@ -12,6 +12,8 @@ class User
         this.balance = info.balance;
         this.creditScore = info.creditScore;
         this.creditCard = info.creditCard;
+
+        this.bank = bank;
     }
 
     _show_info()
@@ -41,19 +43,48 @@ class User
         }
     }
 
-    async _handle_choice(choice)
+    async _withdraw_money()
     {
-        if (choice == 1)
+        const withdraw_money = Number(await ui._ask("Money withdraw: "));
+
+        if (withdraw_money <= 0 || Number.isNaN(withdraw_money))
         {
-            this._show_info();
+            console.log("Error withdraw");
         }
-        if (choice == 2)
+        else 
         {
+            this.balance -= withdraw_money;
             this._show_balance();
         }
-        if (choice == 3)
+    }
+
+    async _transfer_money()
+    {
+        const receiver = await ui._ask("Receiver: ");
+        const transfer_money = Number(await ui._ask("Money transfer: "));
+
+        console.log(this.bank._transfer_money(this , receiver , transfer_money));
+    }
+
+    async _handle_choice(choice)
+    {   
+        switch (choice)
         {
-            await this._deposit_money();
+            case 1:
+                this._show_info();
+                break;
+            case 2:
+                this._show_balance();
+                break;
+            case 3:
+                await this._deposit_money();
+                break
+            case 4:
+                await this._withdraw_money();
+                break
+            case 6:
+                await this._transfer_money();
+                break;
         }
     }
 };
