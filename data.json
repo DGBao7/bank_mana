@@ -1,0 +1,213 @@
+{
+    "users": [
+        {
+            "username": "bon",
+            "password": "123",
+            "name": "Bon",
+            "email": "bon@example.com",
+            "balance": 12500123,
+            "creditScore": 820,
+            "creditCard": {
+                "number": "4532123412345678",
+                "limit": 30000000,
+                "used": 8500000,
+                "available": 21500000,
+                "expiryDate": "2029-06-30",
+                "paymentDueDate": "2026-09-25",
+                "status": "active"
+            }
+        },
+        {
+            "username": "an",
+            "password": "an123456",
+            "name": "An",
+            "email": "an@example.com",
+            "balance": 8200000,
+            "creditScore": 610,
+            "creditCard": null,
+            "transactionHistory": [
+                {
+                    "type": "deposit",
+                    "amount": 8000000,
+                    "date": "2026-08-28",
+                    "description": "Nhan luong",
+                    "balanceAfter": 10000000
+                },
+                {
+                    "type": "transfer",
+                    "amount": 1500000,
+                    "date": "2026-09-05",
+                    "description": "Nhan tien tu Bon",
+                    "balanceAfter": 11500000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 3300000,
+                    "date": "2026-09-12",
+                    "description": "Rut tien mat",
+                    "balanceAfter": 8200000
+                }
+            ]
+        },
+        {
+            "username": "binh",
+            "password": "binh123456",
+            "name": "Binh",
+            "email": "binh@example.com",
+            "balance": 15600000,
+            "creditScore": 785,
+            "creditCard": {
+                "number": "4023567890123456",
+                "limit": 25000000,
+                "used": 6300000,
+                "available": 18700000,
+                "expiryDate": "2030-03-31",
+                "paymentDueDate": "2026-09-28",
+                "status": "active"
+            },
+            "transactionHistory": [
+                {
+                    "type": "deposit",
+                    "amount": 12000000,
+                    "date": "2026-09-01",
+                    "description": "Nhan luong",
+                    "balanceAfter": 18000000
+                },
+                {
+                    "type": "card_payment",
+                    "amount": 1500000,
+                    "date": "2026-09-07",
+                    "description": "Thanh toan du no the",
+                    "balanceAfter": 16500000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 900000,
+                    "date": "2026-09-14",
+                    "description": "Rut tien tai ATM",
+                    "balanceAfter": 15600000
+                }
+            ]
+        },
+        {
+            "username": "cuong",
+            "password": "cuong123456",
+            "name": "Cuong",
+            "email": "cuong@example.com",
+            "balance": 5400000,
+            "creditScore": 495,
+            "creditCard": {
+                "number": "4539876543210987",
+                "limit": 10000000,
+                "used": 9500000,
+                "available": 500000,
+                "expiryDate": "2027-08-31",
+                "paymentDueDate": "2026-09-18",
+                "status": "blocked"
+            },
+            "transactionHistory": [
+                {
+                    "type": "deposit",
+                    "amount": 3000000,
+                    "date": "2026-09-01",
+                    "description": "Nap tien",
+                    "balanceAfter": 7000000
+                },
+                {
+                    "type": "transfer",
+                    "amount": 1000000,
+                    "date": "2026-09-06",
+                    "description": "Chuyen tien cho Binh",
+                    "balanceAfter": 6000000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 600000,
+                    "date": "2026-09-13",
+                    "description": "Rut tien",
+                    "balanceAfter": 5400000
+                }
+            ]
+        },
+        {
+            "username": "linhnhi",
+            "password": "linhnhi123",
+            "name": "Linh Nhi",
+            "email": "linhnhi@example.com",
+            "balance": 21300000,
+            "creditScore": 895,
+            "creditCard": {
+                "number": "5426789012345678",
+                "limit": 50000000,
+                "used": 7500000,
+                "available": 42500000,
+                "expiryDate": "2031-01-31",
+                "paymentDueDate": "2026-09-30",
+                "status": "active"
+            },
+            "transactionHistory": [
+                {
+                    "type": "deposit",
+                    "amount": 25000000,
+                    "date": "2026-09-01",
+                    "description": "Nhan luong",
+                    "balanceAfter": 30000000
+                },
+                {
+                    "type": "transfer",
+                    "amount": 5000000,
+                    "date": "2026-09-08",
+                    "description": "Chuyen tien cho Bon",
+                    "balanceAfter": 25000000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 3700000,
+                    "date": "2026-09-15",
+                    "description": "Rut tien",
+                    "balanceAfter": 21300000
+                }
+            ]
+        },
+        {
+            "username": "hoa",
+            "password": "hoa123456",
+            "name": "Hoa",
+            "email": "hoa@example.com",
+            "balance": 9700000,
+            "creditScore": 690,
+            "creditCard": {
+                "number": "4916123412341234",
+                "limit": 15000000,
+                "used": 12000000,
+                "available": 3000000,
+                "expiryDate": "2025-09-30",
+                "paymentDueDate": "2026-09-22",
+                "status": "expired"
+            },
+            "transactionHistory": [
+                {
+                    "type": "deposit",
+                    "amount": 7000000,
+                    "date": "2026-08-30",
+                    "description": "Nhan luong",
+                    "balanceAfter": 14000000
+                },
+                {
+                    "type": "card_payment",
+                    "amount": 2000000,
+                    "date": "2026-09-08",
+                    "description": "Thanh toan the",
+                    "balanceAfter": 12000000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 2300000,
+                    "date": "2026-09-14",
+                    "description": "Rut tien",
+                    "balanceAfter": 9700000
+                }
+            ]
+        }
+    ]
+}
