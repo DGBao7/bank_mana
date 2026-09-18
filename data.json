@@ -5,8 +5,8 @@
             "password": "123",
             "name": "Bon",
             "email": "bon@example.com",
-            "balance": 12500000,
-            "creditScore": 820,
+            "balance": 1996000000,
+            "creditScore": 999,
             "creditCard": {
                 "number": "4532123412345678",
                 "limit": 30000000,
@@ -15,14 +15,65 @@
                 "expiryDate": "2029-06-30",
                 "paymentDueDate": "2026-09-25",
                 "status": "active"
-            }
+            },
+            "transactionHistory": [
+                {
+                    "type": "withdraw",
+                    "amount": 1000000,
+                    "date": "2026-9-18",
+                    "description": "Rut tien",
+                    "balanceAfter": 1996000000
+                },
+                {
+                    "type": "deposit",
+                    "amount": 0,
+                    "date": "2026-9-18",
+                    "description": "Nap tien",
+                    "balanceAfter": 1997000000
+                },
+                {
+                    "type": "deposit",
+                    "amount": 1000000000,
+                    "date": "2026-9-18",
+                    "description": "Nap tien",
+                    "balanceAfter": 1997000000
+                },
+                {
+                    "type": "transfer",
+                    "amount": 1000000,
+                    "date": "2026-9-18",
+                    "description": "trung thu vv",
+                    "balanceAfter": 997000000
+                },
+                {
+                    "type": "deposit",
+                    "amount": 8000000,
+                    "date": "2026-08-28",
+                    "description": "Nhan luong",
+                    "balanceAfter": 10000000
+                },
+                {
+                    "type": "transfer",
+                    "amount": 1500000,
+                    "date": "2026-09-05",
+                    "description": "Nhan tien tu Bon",
+                    "balanceAfter": 11500000
+                },
+                {
+                    "type": "withdraw",
+                    "amount": 3300000,
+                    "date": "2026-09-12",
+                    "description": "Rut tien mat",
+                    "balanceAfter": 8200000
+                }
+            ]
         },
         {
             "username": "an",
             "password": "an123456",
             "name": "An",
             "email": "an@example.com",
-            "balance": 0,
+            "balance": 123,
             "creditScore": 610,
             "creditCard": null,
             "transactionHistory": [
@@ -134,7 +185,7 @@
             "password": "linhnhi123",
             "name": "Linh Nhi",
             "email": "linhnhi@example.com",
-            "balance": 21301492,
+            "balance": 23301492,
             "creditScore": 895,
             "creditCard": {
                 "number": "5426789012345678",

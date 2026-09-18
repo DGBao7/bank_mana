@@ -27,10 +27,13 @@ while (user_choice != 0)
 
     user_choice = await ui._show_choices();
 
-    if (user_choice > 0 && user_choice < 8)
+    if (user_choice == 8)
+    {
+        is_user = undefined;
+    }
+    else if (user_choice > 0 && user_choice < 8)
     {
         await user._handle_choice(user_choice);
-        bank._save_user(user);
         await ui._ask("Out");
     }
 }
